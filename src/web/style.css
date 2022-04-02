@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src:url('./fonts/NotoSansKR-Regular.otf') format('truetype');
+    font-weight: normal;
+} 
+
+@font-face {
+    font-family: 'Noto Sans';
+    src:url('./fonts/NotoSansKR-Bold.otf') format('truetype');
+    font-weight: bold;
+} 
+
+* {
+    font-family: 'Noto Sans';
+    font-weight: normal;
+}
+div {
+    /* border: 1px solid red; */
+}
+body, html {
+    height: 100%;
+}  
+
+.dm {
+    margin: 1rem;
+}
+.rdm {
+    margin-left: 1rem;
+}
+.login-form {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#login-error {
+    font-weight: bold;
+    color: red;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid white;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    animation: loader-inner 2s infinite ease-in;
+}
+#loader-message {
+    color: white;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
